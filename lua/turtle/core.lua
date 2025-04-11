@@ -68,6 +68,14 @@ function M.is_full()
     return true
 end
 
+function M.build_pillar(height)
+
+end
+
+function M.build_bridge(height)
+
+end
+
 -- TODO: M.ruler(max)
 -- TODO: M.build_pillar(height)
 -- TODO: M.build_bridge(length)
