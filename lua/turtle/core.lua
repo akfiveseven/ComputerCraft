@@ -69,11 +69,27 @@ function M.is_full()
 end
 
 function M.build_pillar(height)
-
+    if t.getItemCount() >= height then
+        for i = 1, height do
+            t.up()
+            t.placeDown()
+        end
+    else
+        print("[ERROR] Pillar: item count")
+    end
+    print("Pillar " .. height)
 end
 
-function M.build_bridge(height)
-
+function M.build_bridge(length)
+    if t.getItemCount() >= length then
+        for i = 1, length do
+            t.forward()
+            t.placeDown()
+        end
+    else
+        print("[ERROR] Bridge: item count")
+    end
+    print("Bridge " .. length)
 end
 
 -- TODO: M.ruler(max)
