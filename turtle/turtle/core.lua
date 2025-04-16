@@ -28,6 +28,7 @@ function M.walk(count)
         for i = 1, count do
             if turtle.detect() == false then
                 print("Forward " .. i)
+                turtle.forward()
             else
                 print("[ERROR] Forward: obstruction")
             end
