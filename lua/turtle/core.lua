@@ -25,9 +25,8 @@ end
 
 function M.walk(count)
     if M.is_enough_fuel(count) then
-        for i = 1, (count or 1) do
-            local o = t.forward()
-            if o == 1 then
+        for i = 1, count do
+            if turtle.detect() then
                 print("Forward " .. i)
             else
                 print("[ERROR] Forward: obstruction")
@@ -69,6 +68,9 @@ function M.is_full()
 end
 
 function M.build_pillar(height)
+    if turtle.getFuelLevel() < height then
+        print("[ERROR] Pillar: fuel")
+    end
     if t.getItemCount() >= height then
         for i = 1, height do
             t.up()
@@ -81,9 +83,13 @@ function M.build_pillar(height)
 end
 
 function M.build_bridge(length)
+    if turtle.getFuelLevel() < height+1 then
+        print("[ERROR] Bridge: fuel")
+    end
+    turtle.up()
     if t.getItemCount() >= length then
         for i = 1, length do
-            t.forward()
+            M.walk(1)
             t.placeDown()
         end
     else

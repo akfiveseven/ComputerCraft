@@ -1,3 +1,6 @@
-shell.setPath(shell.path() .. ":/prog")
+-- Add programs in /lua/ directory to PATH (can be run from anywhere)
+shell.setPath(shell.path() .. ":/lua")
 
--- Select program menu or shell
+-- Prints out fuel level
+print("Fuel: " .. turtle.getFuelLevel())
+
