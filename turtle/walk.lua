@@ -3,7 +3,7 @@ local args = {...}
 
 for i = 1, tonumber(args[1]) do
     if core.is_enough_fuel(tonumber(args[1])) then
-        for i = 1, count do
+        for i = 1, i do
             if turtle.detect() == false then
                 print("Walk " .. i)
                 turtle.forward()
