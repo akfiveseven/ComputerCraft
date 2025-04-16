@@ -38,6 +38,21 @@ function M.walk(count)
     end
 end
 
+function M.back(count)
+    if M.is_enough_fuel(count) then
+        for i = 1, count do
+            if turtle.detect() == false then
+                print("Back " .. i)
+                turtle.back()
+            else
+                print("[ERROR] Back: obstruction")
+            end
+        end
+    else
+        print("[ERROR] Back: fuel")
+    end
+end
+
 function M.get_item_name()
 
     if t.getItemCount() > 0 then
