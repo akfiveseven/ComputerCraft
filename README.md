@@ -1,11 +1,7 @@
 
-
-
----
-
 # Quick Install \[Recommended\]
 
-1. Install via startup script: `pastebin get 5g5KVp1c setup.lua`
+1. Install via startup script: `pastebin get ru2ab2X4 setup.lua`
 2. Run setup: `setup`
 
 ## Alternative install
