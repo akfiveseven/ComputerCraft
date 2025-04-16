@@ -1,4 +1,12 @@
 
+To use api in root/home dir: 
+```
+package.path = package.path .. ";lua/?.lua;lua/?/init.lua;lua/?/?.lua;lua/?/?/.lua"
+local i = require("api.core")
+```
+
+---
+
 1. Install via startup script: `pastebin get 5g5KVp1c setup.lua`
 2. Run setup: `setup`
 
