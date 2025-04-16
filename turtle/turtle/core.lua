@@ -26,7 +26,7 @@ end
 function M.walk(count)
     if M.is_enough_fuel(count) then
         for i = 1, count do
-            if turtle.detect() then
+            if turtle.detect() == false then
                 print("Forward " .. i)
             else
                 print("[ERROR] Forward: obstruction")
