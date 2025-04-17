@@ -6,7 +6,7 @@ local function unload()
     for i = 1, 16 do
         turtle.select(i)
         if turtle.getItemCount() > 0 then
-            if turtle.getItemDetail().name == "mincraft:dirt" or turtle.getItemDetail().name == "minecraft:cobblestone" or turtle.getItemDetail().name == "minecraft:cobbled_deepslate" or turtle.getItemDetail().name == "consistency_plus:cobbled_tuff" then
+            if turtle.getItemDetail().name == "minecraft:cobblestone" or turtle.getItemDetail().name == "minecraft:cobbled_deepslate" or turtle.getItemDetail().name == "consistency_plus:cobbled_tuff" then
                 turtle.drop(64)
             end
         end
