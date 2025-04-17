@@ -99,7 +99,7 @@ function M.build_pillar(height)
 end
 
 function M.build_bridge(length)
-    if turtle.getFuelLevel() < height+1 then
+    if turtle.getFuelLevel() < length+1 then
         print("[ERROR] Bridge: fuel")
     end
     turtle.up()
