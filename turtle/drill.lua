@@ -28,10 +28,12 @@ local function check()
     end
 end
 
+print("Start fuel: " .. turtle.getFuelLevel())
+
 for i = 1, count do
     check()
     turtle.forward()
 end
 
-shell.run("fuel")
+print("End fuel: " .. turtle.getFuelLevel())
 
