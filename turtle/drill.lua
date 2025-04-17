@@ -23,6 +23,7 @@ local function check()
     end
     unload()
     while turtle.detect() == true do
+        shell.run("refuel-all")
         turtle.up()
     end
 end
@@ -31,3 +32,6 @@ for i = 1, count do
     check()
     turtle.forward()
 end
+
+shell.run("fuel")
+
